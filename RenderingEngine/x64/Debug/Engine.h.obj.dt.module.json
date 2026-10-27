@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "RenderingEngine\\x64\\Debug\\Engine.obj",
+            "outputs": [
+                "RenderingEngine\\x64\\Debug\\Engine.h.obj.dt.module.json",
+                "RenderingEngine\\x64\\Debug\\Engine.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "rendering-engine",
+  "version-string": "0.1.0",
+  "dependencies": [
+    "glfw3",
+    "glm",
+    "volk",
+    "spdlog",
+    "vulkan-memory-allocator",
+    "stb"
+  ],
+  "builtin-baseline": "5363acb796e576328288fae60c25304e227e9839"
+}

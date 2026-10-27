@@ -1,0 +1,5 @@
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/CMakeFiles/shaders.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/CMakeFiles/ALL_BUILD.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/CMakeFiles/ZERO_CHECK.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/src/engine/CMakeFiles/engine.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/src/app/CMakeFiles/app.dir

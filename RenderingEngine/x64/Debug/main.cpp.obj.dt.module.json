@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "RenderingEngine\\x64\\Debug\\main.obj",
+            "outputs": [
+                "RenderingEngine\\x64\\Debug\\main.cpp.obj.dt.module.json",
+                "RenderingEngine\\x64\\Debug\\main.cpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

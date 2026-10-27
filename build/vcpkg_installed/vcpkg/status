@@ -1,0 +1,105 @@
+Package: vcpkg-cmake-config
+Version: 2026-07-21
+Architecture: x64-windows
+Multi-Arch: same
+Abi: bd772d249d0579f0c8653d333bd50a12bf946683e0d194827227ec5bd4dbc5b4
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2025-08-07
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 9bad304dcd2a2b431e43a16839ce9e1443adf61598cbd42061d0d9c42b4152f3
+Status: install ok installed
+
+Package: glfw3
+Version: 3.5.1
+Depends: vcpkg-cmake:x64-windows, vcpkg-cmake-config:x64-windows
+Architecture: x64-windows-static-md
+Multi-Arch: same
+Abi: f2a331cc4b9571fc50b439f73cecb301e54f2d011c0f052d4e8ba60b555d8893
+Description: GLFW is a free, Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan application development. It provides a simple, platform-independent API for creating windows, contexts and surfaces, reading input, handling events, etc.
+Status: install ok installed
+
+Package: glm
+Version: 1.0.3
+Depends: vcpkg-cmake:x64-windows, vcpkg-cmake-config:x64-windows
+Architecture: x64-windows-static-md
+Multi-Arch: same
+Abi: 83102c07bfe6c2bd80bdd3858e997ca45751004b6184dd2f3b9a4dd533789a55
+Description: OpenGL Mathematics (GLM)
+Status: install ok installed
+
+Package: fmt
+Version: 12.2.0
+Port-Version: 1
+Depends: vcpkg-cmake:x64-windows, vcpkg-cmake-config:x64-windows
+Architecture: x64-windows-static-md
+Multi-Arch: same
+Abi: 6eb7495ee3087bfa592d842d1ecca48585f2adda60c3ceb4aa84541415b7f5ae
+Description: {fmt} is an open-source formatting library providing a fast and safe alternative to C stdio and C++ iostreams.
+Status: install ok installed
+
+Package: spdlog
+Version: 1.17.0
+Port-Version: 1
+Depends: vcpkg-cmake:x64-windows, vcpkg-cmake-config:x64-windows
+Architecture: x64-windows-static-md
+Multi-Arch: same
+Abi: 0a99fd851c24373ae4ed624c65815877840888fcd54601d0e9b7bcbe0a730cc7
+Description: Very fast, header-only/compiled, C++ logging library.
+Default-Features: fmt, tz-offset
+Status: install ok installed
+
+Package: spdlog
+Feature: fmt
+Depends: fmt
+Architecture: x64-windows-static-md
+Multi-Arch: same
+Description: Use fmt library
+Status: install ok installed
+
+Package: spdlog
+Feature: tz-offset
+Architecture: x64-windows-static-md
+Multi-Arch: same
+Description: Omit %z timezone offset (use on platforms without tm_gmtoff)
+Status: install ok installed
+
+Package: stb
+Version: 2026-08-02
+Architecture: x64-windows-static-md
+Multi-Arch: same
+Abi: d7d9985688c8af482ef1b7f175465de8c19f914d40769ff8221a64b12baefd9c
+Description: public domain header-only libraries
+Status: install ok installed
+
+Package: vulkan-headers
+Version: 1.4.363.0
+Depends: vcpkg-cmake:x64-windows, vcpkg-cmake-config:x64-windows
+Architecture: x64-windows-static-md
+Multi-Arch: same
+Abi: 6304e21b651082afa7ee1531671c328b827a68abeec41539f14475de22beef70
+Description: Vulkan header files and API registry
+Status: install ok installed
+
+Package: volk
+Version: 1.4.363.0
+Depends: vcpkg-cmake:x64-windows, vcpkg-cmake-config:x64-windows, vulkan-headers
+Architecture: x64-windows-static-md
+Multi-Arch: same
+Abi: 32ea5888ea1596c639d71a9a72cbbe45444a4887d7e45f051e29b6a6ffbd0627
+Description: Meta loader for Vulkan API.
+    Note that the static library target volk::volk is built without platform-specific defines.
+    Use the header-only target volk::volk_headers if you require platform-specific extensions.
+Status: install ok installed
+
+Package: vulkan-memory-allocator
+Version: 3.5.0
+Depends: vcpkg-cmake:x64-windows, vcpkg-cmake-config:x64-windows
+Architecture: x64-windows-static-md
+Multi-Arch: same
+Abi: 7c66faacef67da765a42d64ae11833ac21b5ff23645d9bcb3508741f780d0dc9
+Description: Easy to integrate Vulkan memory allocation library from GPUOpen
+Status: install ok installed
+
