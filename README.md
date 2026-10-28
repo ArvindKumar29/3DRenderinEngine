@@ -64,9 +64,9 @@ Windows 10 or 11 (x64) only for now.
 **One-time vcpkg setup**
 
 ```powershell
-git clone https://github.com/microsoft/vcpkg.git C:\dev\vcpkg
+git clone https://github.com/microsoft/vcpkg.git D:\dev\vcpkg
 C:\dev\vcpkg\bootstrap-vcpkg.bat -disableMetrics
-setx VCPKG_ROOT "C:\dev\vcpkg"
+setx VCPKG_ROOT "D:\dev\vcpkg"
 ```
 
 Reopen the terminal after `setx`.
@@ -74,7 +74,7 @@ Reopen the terminal after `setx`.
 **Build and run**
 
 ```powershell
-git clone https://github.com/ArvindKumar29/vk-renderer.git
+git clone https://github.com/ArvindKumar29/eDRenderinEngine.git
 cd vk-renderer
 cmake --preset default
 cmake --build --preset debug
