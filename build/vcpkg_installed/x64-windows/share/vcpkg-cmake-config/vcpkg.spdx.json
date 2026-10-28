@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/vcpkg-cmake-config-x64-windows-2026-07-21-cc2f9377-91b5-4500-b7f4-44804621bc61",
-  "name": "vcpkg-cmake-config:x64-windows@2026-07-21 bd772d249d0579f0c8653d333bd50a12bf946683e0d194827227ec5bd4dbc5b4",
+  "documentNamespace": "https://spdx.org/spdxdocs/vcpkg-cmake-config-x64-windows-2026-07-21-c91b5b41-196e-402f-8095-e36a9013d42c",
+  "name": "vcpkg-cmake-config:x64-windows@2026-07-21 a279efe7613d1ad80ae85dbb7d5552abe5609a0b1894aaf4f28049c508007621",
   "creationInfo": {
     "creators": [
-      "Tool: vcpkg-2026-09-26-51bf87ca6e9bf3e622d84ff323bd202ab1ca0c0b"
+      "Tool: vcpkg-2026-07-27-98d7cb0cf1f4686a3e43aa5672b6230c1d56bce8"
     ],
-    "created": "2026-10-27T11:20:15Z"
+    "created": "2026-10-28T08:08:39Z"
   },
   "relationships": [
     {
@@ -73,7 +73,7 @@
       "name": "vcpkg-cmake-config",
       "SPDXID": "SPDXRef-port",
       "versionInfo": "2026-07-21",
-      "downloadLocation": "git+https://github.com/Microsoft/vcpkg@51befcb03097f8d19c1c59f9ec3625e69d85322a",
+      "downloadLocation": "git+https://github.com/microsoft/vcpkg@51befcb03097f8d19c1c59f9ec3625e69d85322a",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
@@ -82,7 +82,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:vcpkg/vcpkg-cmake-config@2026-07-21?triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%4051befcb03097f8d19c1c59f9ec3625e69d85322a"
+          "referenceLocator": "pkg:vcpkg/vcpkg-cmake-config@2026-07-21?triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmicrosoft%2Fvcpkg%4051befcb03097f8d19c1c59f9ec3625e69d85322a"
         },
         {
           "referenceCategory": "PERSISTENT-ID",
@@ -94,7 +94,7 @@
     {
       "name": "vcpkg-cmake-config:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "bd772d249d0579f0c8653d333bd50a12bf946683e0d194827227ec5bd4dbc5b4",
+      "versionInfo": "a279efe7613d1ad80ae85dbb7d5552abe5609a0b1894aaf4f28049c508007621",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",

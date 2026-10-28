@@ -1,7 +1,8 @@
 #include <iostream>
+#include "engine/Engine.h"
 
 int main() {
-	std::cout << "Hello, World!" << std::endl;
-	std::cout << "This is a 3D Rendering Engine." << std::endl;
+	VKRENDERER::Engine engine;
+	engine.run();
 	return 0;
 }

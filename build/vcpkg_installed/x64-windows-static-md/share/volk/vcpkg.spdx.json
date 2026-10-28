@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/volk-x64-windows-static-md-1.4.363.0-5da41b86-810c-4361-817c-da1f37e2cece",
-  "name": "volk:x64-windows-static-md@1.4.363.0 32ea5888ea1596c639d71a9a72cbbe45444a4887d7e45f051e29b6a6ffbd0627",
+  "documentNamespace": "https://spdx.org/spdxdocs/volk-x64-windows-static-md-1.4.363.0-a37fa0d5-507d-4162-86dc-1244e45eddfa",
+  "name": "volk:x64-windows-static-md@1.4.363.0 0e89270f45ec87004d2d1c27eb4af1b8365b9e110056dc1dafcbaa7022dc11a0",
   "creationInfo": {
     "creators": [
-      "Tool: vcpkg-2026-09-26-51bf87ca6e9bf3e622d84ff323bd202ab1ca0c0b"
+      "Tool: vcpkg-2026-07-27-98d7cb0cf1f4686a3e43aa5672b6230c1d56bce8"
     ],
-    "created": "2026-10-27T11:25:27Z"
+    "created": "2026-10-28T08:09:48Z"
   },
   "relationships": [
     {
@@ -108,7 +108,7 @@
       "name": "volk",
       "SPDXID": "SPDXRef-port",
       "versionInfo": "1.4.363.0",
-      "downloadLocation": "git+https://github.com/Microsoft/vcpkg@ac13d389fc68a2cbffefceea680e5e26cfbaedb8",
+      "downloadLocation": "git+https://github.com/microsoft/vcpkg@ac13d389fc68a2cbffefceea680e5e26cfbaedb8",
       "homepage": "https://github.com/zeux/volk",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -119,7 +119,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:vcpkg/volk@1.4.363.0?triplet=x64-windows-static-md&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%40ac13d389fc68a2cbffefceea680e5e26cfbaedb8"
+          "referenceLocator": "pkg:vcpkg/volk@1.4.363.0?triplet=x64-windows-static-md&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmicrosoft%2Fvcpkg%40ac13d389fc68a2cbffefceea680e5e26cfbaedb8"
         },
         {
           "referenceCategory": "PERSISTENT-ID",
@@ -131,7 +131,7 @@
     {
       "name": "volk:x64-windows-static-md",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "32ea5888ea1596c639d71a9a72cbbe45444a4887d7e45f051e29b6a6ffbd0627",
+      "versionInfo": "0e89270f45ec87004d2d1c27eb4af1b8365b9e110056dc1dafcbaa7022dc11a0",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -208,7 +208,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "fe13e0234478815b67171109e4c040263e5e211c2cd0e02f837da7af56ea7d0f"
+          "checksumValue": "326250839ead24b3980ab051f77e449888069d2f45d4ea01ea37b7e0e529e21f"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -244,7 +244,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "78a960f845235a3ae11e5350f2ecbe4f88948d46f382777c7a19211e5322580c"
+          "checksumValue": "c75c0da567bf3b1aa0c4fdc78440cded7f035fb7d179cf701e400048fa4c2a8f"
         }
       ],
       "licenseConcluded": "NOASSERTION",

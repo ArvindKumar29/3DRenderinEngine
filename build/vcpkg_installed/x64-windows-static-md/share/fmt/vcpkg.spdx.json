@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/fmt-x64-windows-static-md-12.2.0#1-ea8feb11-f475-422f-876b-683649ec62d4",
-  "name": "fmt:x64-windows-static-md@12.2.0#1 6eb7495ee3087bfa592d842d1ecca48585f2adda60c3ceb4aa84541415b7f5ae",
+  "documentNamespace": "https://spdx.org/spdxdocs/fmt-x64-windows-static-md-12.2.0#1-16fb961b-fb8a-4b64-9cc2-3675be52e8da",
+  "name": "fmt:x64-windows-static-md@12.2.0#1 5ab5a421e85fe378dc07fbbeb9074dcdc26e5b8622b59d81383972ab95adf13a",
   "creationInfo": {
     "creators": [
-      "Tool: vcpkg-2026-09-26-51bf87ca6e9bf3e622d84ff323bd202ab1ca0c0b"
+      "Tool: vcpkg-2026-07-27-98d7cb0cf1f4686a3e43aa5672b6230c1d56bce8"
     ],
-    "created": "2026-10-27T11:20:54Z"
+    "created": "2026-10-28T08:09:20Z"
   },
   "relationships": [
     {
@@ -193,7 +193,7 @@
       "name": "fmt",
       "SPDXID": "SPDXRef-port",
       "versionInfo": "12.2.0#1",
-      "downloadLocation": "git+https://github.com/Microsoft/vcpkg@7ca0b8c0026883daf28a0db75f6b4964bae2979a",
+      "downloadLocation": "git+https://github.com/microsoft/vcpkg@7ca0b8c0026883daf28a0db75f6b4964bae2979a",
       "homepage": "https://github.com/fmtlib/fmt",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -204,7 +204,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:vcpkg/fmt@12.2.0?port_version=1&triplet=x64-windows-static-md&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%407ca0b8c0026883daf28a0db75f6b4964bae2979a"
+          "referenceLocator": "pkg:vcpkg/fmt@12.2.0?port_version=1&triplet=x64-windows-static-md&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmicrosoft%2Fvcpkg%407ca0b8c0026883daf28a0db75f6b4964bae2979a"
         },
         {
           "referenceCategory": "PERSISTENT-ID",
@@ -216,7 +216,7 @@
     {
       "name": "fmt:x64-windows-static-md",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "6eb7495ee3087bfa592d842d1ecca48585f2adda60c3ceb4aa84541415b7f5ae",
+      "versionInfo": "5ab5a421e85fe378dc07fbbeb9074dcdc26e5b8622b59d81383972ab95adf13a",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -308,7 +308,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b50d8b5cbb7b2c1327721c6b302921febee5dd554b5611fcf6a216a0c9c86bec"
+          "checksumValue": "baa8692eb8996ca41a7a0b9620fde853653c5a955f92b5221a3ef34b141f25c9"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -320,7 +320,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2ace7f900cc2ac6674001d71a703ec3f41eca10cf6091aaf680a61f2f82cdde3"
+          "checksumValue": "8cab7b6d3ab9a1707477e38cc19defda6300da9295ce05765059a795e0111e5e"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -524,7 +524,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2ab636aac8370e069b0aef78ef4e2ddc08d486213e83e3dcba5d2e1587599bc8"
+          "checksumValue": "2a190b49dff6a70d7d32ab28ab084c8dd9c8739541d8e7699225216a49fa50a5"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -536,7 +536,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "396ffb1821e818ba64f6be215fc253016eee610a09517effa2fc55f750845d1a"
+          "checksumValue": "78d3a0fe7d446dde67a43fa0aeafea481151a822fda604b71f8a278256ed7ba0"
         }
       ],
       "licenseConcluded": "NOASSERTION",

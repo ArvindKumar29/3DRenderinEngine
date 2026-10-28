@@ -2,14 +2,40 @@
 <Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="D:\dev\3D_RENDERING_ENGINE\RenderingEngine\src\engine\Engine.cpp" />
+    <ClCompile Include="D:\dev\3D_RENDERING_ENGINE\RenderingEngine\src\engine\Vulkan\Device.cpp">
+      <Filter>Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\dev\3D_RENDERING_ENGINE\RenderingEngine\src\engine\Vulkan\Instance.cpp">
+      <Filter>Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\dev\3D_RENDERING_ENGINE\RenderingEngine\src\engine\Vulkan\ValidationLayers.cpp">
+      <Filter>Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\dev\3D_RENDERING_ENGINE\RenderingEngine\src\engine\Vulkan\Window.cpp">
+      <Filter>Vulkan</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\dev\3D_RENDERING_ENGINE\RenderingEngine\src\engine\Engine.h" />
-    <ClInclude Include="Version.h" />
+    <ClInclude Include="D:\dev\3D_RENDERING_ENGINE\RenderingEngine\src\engine\Vulkan\Device.h">
+      <Filter>Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\dev\3D_RENDERING_ENGINE\RenderingEngine\src\engine\Vulkan\Instance.h">
+      <Filter>Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\dev\3D_RENDERING_ENGINE\RenderingEngine\src\engine\Vulkan\ValidationLayers.h">
+      <Filter>Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\dev\3D_RENDERING_ENGINE\RenderingEngine\src\engine\Vulkan\Window.h">
+      <Filter>Vulkan</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\dev\3D_RENDERING_ENGINE\RenderingEngine\src\engine\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="Vulkan">
+      <UniqueIdentifier>{BD166E48-07D4-3963-8480-8BE1B3FBC6F7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

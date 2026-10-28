@@ -80,6 +80,10 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/dev/3D_RENDERING_ENGINE/RenderingEngine/src/engine/*.cpp")
 set(OLD_GLOB
   "D:/dev/3D_RENDERING_ENGINE/RenderingEngine/src/engine/Engine.cpp"
+  "D:/dev/3D_RENDERING_ENGINE/RenderingEngine/src/engine/Vulkan/Device.cpp"
+  "D:/dev/3D_RENDERING_ENGINE/RenderingEngine/src/engine/Vulkan/Instance.cpp"
+  "D:/dev/3D_RENDERING_ENGINE/RenderingEngine/src/engine/Vulkan/ValidationLayers.cpp"
+  "D:/dev/3D_RENDERING_ENGINE/RenderingEngine/src/engine/Vulkan/Window.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -106,6 +110,10 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/dev/3D_RENDERING_ENGINE/RenderingEngine/src/engine/*.h")
 set(OLD_GLOB
   "D:/dev/3D_RENDERING_ENGINE/RenderingEngine/src/engine/Engine.h"
+  "D:/dev/3D_RENDERING_ENGINE/RenderingEngine/src/engine/Vulkan/Device.h"
+  "D:/dev/3D_RENDERING_ENGINE/RenderingEngine/src/engine/Vulkan/Instance.h"
+  "D:/dev/3D_RENDERING_ENGINE/RenderingEngine/src/engine/Vulkan/ValidationLayers.h"
+  "D:/dev/3D_RENDERING_ENGINE/RenderingEngine/src/engine/Vulkan/Window.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

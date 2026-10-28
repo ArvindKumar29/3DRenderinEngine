@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/vcpkg-cmake-x64-windows-2025-08-07-8656b341-52fa-41d3-bac7-58a7af66e5ba",
-  "name": "vcpkg-cmake:x64-windows@2025-08-07 9bad304dcd2a2b431e43a16839ce9e1443adf61598cbd42061d0d9c42b4152f3",
+  "documentNamespace": "https://spdx.org/spdxdocs/vcpkg-cmake-x64-windows-2025-08-07-4803c1af-d97d-4462-a673-7cef97d23074",
+  "name": "vcpkg-cmake:x64-windows@2025-08-07 e1eb7f3289a4eefd6b6366f32c34f6aed51e83dec6d9ac2485dfb9c5e1f3fc38",
   "creationInfo": {
     "creators": [
-      "Tool: vcpkg-2026-09-26-51bf87ca6e9bf3e622d84ff323bd202ab1ca0c0b"
+      "Tool: vcpkg-2026-07-27-98d7cb0cf1f4686a3e43aa5672b6230c1d56bce8"
     ],
-    "created": "2026-10-27T11:20:15Z"
+    "created": "2026-10-28T08:08:40Z"
   },
   "relationships": [
     {
@@ -88,7 +88,7 @@
       "name": "vcpkg-cmake",
       "SPDXID": "SPDXRef-port",
       "versionInfo": "2025-08-07",
-      "downloadLocation": "git+https://github.com/Microsoft/vcpkg@16b9390dfeaca6df7288ba3f827e40e48e5fc942",
+      "downloadLocation": "git+https://github.com/microsoft/vcpkg@16b9390dfeaca6df7288ba3f827e40e48e5fc942",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
@@ -97,7 +97,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:vcpkg/vcpkg-cmake@2025-08-07?triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%4016b9390dfeaca6df7288ba3f827e40e48e5fc942"
+          "referenceLocator": "pkg:vcpkg/vcpkg-cmake@2025-08-07?triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmicrosoft%2Fvcpkg%4016b9390dfeaca6df7288ba3f827e40e48e5fc942"
         },
         {
           "referenceCategory": "PERSISTENT-ID",
@@ -109,7 +109,7 @@
     {
       "name": "vcpkg-cmake:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "9bad304dcd2a2b431e43a16839ce9e1443adf61598cbd42061d0d9c42b4152f3",
+      "versionInfo": "e1eb7f3289a4eefd6b6366f32c34f6aed51e83dec6d9ac2485dfb9c5e1f3fc38",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",

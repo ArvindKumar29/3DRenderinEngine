@@ -1,0 +1,16 @@
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glm/x64-windows-static-md-dbg/CMakeFiles/uninstall.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glm/x64-windows-static-md-dbg/CMakeFiles/package.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glm/x64-windows-static-md-dbg/CMakeFiles/package_source.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glm/x64-windows-static-md-dbg/CMakeFiles/edit_cache.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glm/x64-windows-static-md-dbg/CMakeFiles/rebuild_cache.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glm/x64-windows-static-md-dbg/CMakeFiles/list_install_components.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glm/x64-windows-static-md-dbg/CMakeFiles/install.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glm/x64-windows-static-md-dbg/CMakeFiles/install/local.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glm/x64-windows-static-md-dbg/glm/CMakeFiles/glm.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glm/x64-windows-static-md-dbg/glm/CMakeFiles/package.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glm/x64-windows-static-md-dbg/glm/CMakeFiles/package_source.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glm/x64-windows-static-md-dbg/glm/CMakeFiles/edit_cache.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glm/x64-windows-static-md-dbg/glm/CMakeFiles/rebuild_cache.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glm/x64-windows-static-md-dbg/glm/CMakeFiles/list_install_components.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glm/x64-windows-static-md-dbg/glm/CMakeFiles/install.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glm/x64-windows-static-md-dbg/glm/CMakeFiles/install/local.dir

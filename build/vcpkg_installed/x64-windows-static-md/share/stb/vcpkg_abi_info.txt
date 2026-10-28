@@ -4,7 +4,7 @@ features core
 portfile.cmake cfb7a1fe0b588436f5523fe51253958bc3eee5b88ea601eb8700b67f2964a5cf
 ports.cmake ae49e729c370bed1954cdd64875854fe1bb2ae4b9ed0316f6777d32ffeb9bd4a
 post_build_checks 2
-powershell 7.6.7
+powershell 7.6.3
 sbom_info 1
 triplet x64-windows-static-md
 triplet_abi 583a1b57956affe6c3daa5f6eea37867cf663792950ec52e0b91adecb8170c9c-22bb7bf0b38facf83b667d9c31515db80243d3806d795d57a6bb825915ed30a1-5360a0391dd289a857337bb9c25218d3a85e7487

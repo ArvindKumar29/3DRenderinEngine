@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/spdlog-x64-windows-static-md-1.17.0#1-a9d99970-548c-43d0-9480-e13b657001ae",
-  "name": "spdlog:x64-windows-static-md@1.17.0#1 0a99fd851c24373ae4ed624c65815877840888fcd54601d0e9b7bcbe0a730cc7",
+  "documentNamespace": "https://spdx.org/spdxdocs/spdlog-x64-windows-static-md-1.17.0#1-13703199-0f9f-4b14-8e48-b1ff4061219c",
+  "name": "spdlog:x64-windows-static-md@1.17.0#1 e840c146dc925406603223f6baa036fe9c4621f81801020eb1b119b1a7f78daa",
   "creationInfo": {
     "creators": [
-      "Tool: vcpkg-2026-09-26-51bf87ca6e9bf3e622d84ff323bd202ab1ca0c0b"
+      "Tool: vcpkg-2026-07-27-98d7cb0cf1f4686a3e43aa5672b6230c1d56bce8"
     ],
-    "created": "2026-10-27T11:21:07Z"
+    "created": "2026-10-28T08:09:32Z"
   },
   "relationships": [
     {
@@ -558,7 +558,7 @@
       "name": "spdlog",
       "SPDXID": "SPDXRef-port",
       "versionInfo": "1.17.0#1",
-      "downloadLocation": "git+https://github.com/Microsoft/vcpkg@c42bb1e74ab55b299d7fe52e68d0ab7b5dee165c",
+      "downloadLocation": "git+https://github.com/microsoft/vcpkg@c42bb1e74ab55b299d7fe52e68d0ab7b5dee165c",
       "homepage": "https://github.com/gabime/spdlog",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -569,7 +569,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:vcpkg/spdlog@1.17.0?port_version=1&triplet=x64-windows-static-md&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%40c42bb1e74ab55b299d7fe52e68d0ab7b5dee165c"
+          "referenceLocator": "pkg:vcpkg/spdlog@1.17.0?port_version=1&triplet=x64-windows-static-md&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmicrosoft%2Fvcpkg%40c42bb1e74ab55b299d7fe52e68d0ab7b5dee165c"
         },
         {
           "referenceCategory": "PERSISTENT-ID",
@@ -581,7 +581,7 @@
     {
       "name": "spdlog:x64-windows-static-md",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "0a99fd851c24373ae4ed624c65815877840888fcd54601d0e9b7bcbe0a730cc7",
+      "versionInfo": "e840c146dc925406603223f6baa036fe9c4621f81801020eb1b119b1a7f78daa",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -700,7 +700,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "8cc40ee23a82f4c9f5fb7460d8cf265c9a79efa2d90d300a573a6303b32f1d5e"
+          "checksumValue": "80b360b0fc2721adcf9ad08cd86254cf95d3a43be9e89c65c04eaa331270bedd"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1804,7 +1804,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ba79a73b361f9c7c327a2f0c2895e1140d2e87c6a838dae479043e80441351ec"
+          "checksumValue": "c7df241c5b1435c1f276cbbca43fabcf4bf6fa040efa292b10b5fd7c9b047dea"
         }
       ],
       "licenseConcluded": "NOASSERTION",

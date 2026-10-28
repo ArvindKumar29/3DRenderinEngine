@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/stb-x64-windows-static-md-2026-08-02-fc6639e2-7695-459a-9761-f2efd32b9d7e",
-  "name": "stb:x64-windows-static-md@2026-08-02 d7d9985688c8af482ef1b7f175465de8c19f914d40769ff8221a64b12baefd9c",
+  "documentNamespace": "https://spdx.org/spdxdocs/stb-x64-windows-static-md-2026-08-02-d91bfc86-e838-4523-9646-729034315299",
+  "name": "stb:x64-windows-static-md@2026-08-02 96235e092e138bece7153c89d6beb13a8e67b03b2d2aac467978f1009d34aa34",
   "creationInfo": {
     "creators": [
-      "Tool: vcpkg-2026-09-26-51bf87ca6e9bf3e622d84ff323bd202ab1ca0c0b"
+      "Tool: vcpkg-2026-07-27-98d7cb0cf1f4686a3e43aa5672b6230c1d56bce8"
     ],
-    "created": "2026-10-27T11:21:09Z"
+    "created": "2026-10-28T08:09:34Z"
   },
   "relationships": [
     {
@@ -188,7 +188,7 @@
       "name": "stb",
       "SPDXID": "SPDXRef-port",
       "versionInfo": "2026-08-02",
-      "downloadLocation": "git+https://github.com/Microsoft/vcpkg@06d8f21f98364f713ee45cd2183cb10d2ac026a8",
+      "downloadLocation": "git+https://github.com/microsoft/vcpkg@06d8f21f98364f713ee45cd2183cb10d2ac026a8",
       "homepage": "https://github.com/nothings/stb",
       "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
@@ -199,7 +199,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:vcpkg/stb@2026-08-02?triplet=x64-windows-static-md&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%4006d8f21f98364f713ee45cd2183cb10d2ac026a8"
+          "referenceLocator": "pkg:vcpkg/stb@2026-08-02?triplet=x64-windows-static-md&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmicrosoft%2Fvcpkg%4006d8f21f98364f713ee45cd2183cb10d2ac026a8"
         },
         {
           "referenceCategory": "PERSISTENT-ID",
@@ -211,7 +211,7 @@
     {
       "name": "stb:x64-windows-static-md",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "d7d9985688c8af482ef1b7f175465de8c19f914d40769ff8221a64b12baefd9c",
+      "versionInfo": "96235e092e138bece7153c89d6beb13a8e67b03b2d2aac467978f1009d34aa34",
       "downloadLocation": "NONE",
       "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",

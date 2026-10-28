@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/vulkan-headers-x64-windows-static-md-1.4.363.0-31cdba35-e752-45d9-b302-bfe3bdd19dcd",
-  "name": "vulkan-headers:x64-windows-static-md@1.4.363.0 6304e21b651082afa7ee1531671c328b827a68abeec41539f14475de22beef70",
+  "documentNamespace": "https://spdx.org/spdxdocs/vulkan-headers-x64-windows-static-md-1.4.363.0-762eb6df-aecc-445e-8429-0578c9764459",
+  "name": "vulkan-headers:x64-windows-static-md@1.4.363.0 aeb9d9749afb6cd21ba6484360ac826f6a7da96b2e05a216aca21f69a846ba65",
   "creationInfo": {
     "creators": [
-      "Tool: vcpkg-2026-09-26-51bf87ca6e9bf3e622d84ff323bd202ab1ca0c0b"
+      "Tool: vcpkg-2026-07-27-98d7cb0cf1f4686a3e43aa5672b6230c1d56bce8"
     ],
-    "created": "2026-10-27T11:21:15Z"
+    "created": "2026-10-28T08:09:44Z"
   },
   "relationships": [
     {
@@ -398,7 +398,7 @@
       "name": "vulkan-headers",
       "SPDXID": "SPDXRef-port",
       "versionInfo": "1.4.363.0",
-      "downloadLocation": "git+https://github.com/Microsoft/vcpkg@0785e12434536ed69000cf9b16efaaf0e036a0a0",
+      "downloadLocation": "git+https://github.com/microsoft/vcpkg@0785e12434536ed69000cf9b16efaaf0e036a0a0",
       "homepage": "https://github.com/KhronosGroup/Vulkan-Headers",
       "licenseConcluded": "(Apache-2.0 OR MIT)",
       "licenseDeclared": "NOASSERTION",
@@ -409,7 +409,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:vcpkg/vulkan-headers@1.4.363.0?triplet=x64-windows-static-md&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%400785e12434536ed69000cf9b16efaaf0e036a0a0"
+          "referenceLocator": "pkg:vcpkg/vulkan-headers@1.4.363.0?triplet=x64-windows-static-md&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmicrosoft%2Fvcpkg%400785e12434536ed69000cf9b16efaaf0e036a0a0"
         },
         {
           "referenceCategory": "PERSISTENT-ID",
@@ -421,7 +421,7 @@
     {
       "name": "vulkan-headers:x64-windows-static-md",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "6304e21b651082afa7ee1531671c328b827a68abeec41539f14475de22beef70",
+      "versionInfo": "aeb9d9749afb6cd21ba6484360ac826f6a7da96b2e05a216aca21f69a846ba65",
       "downloadLocation": "NONE",
       "licenseConcluded": "(Apache-2.0 OR MIT)",
       "licenseDeclared": "NOASSERTION",

@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/vulkan-memory-allocator-x64-windows-static-md-3.5.0-889c05bf-9936-4fde-905a-c072c17d5c4d",
-  "name": "vulkan-memory-allocator:x64-windows-static-md@3.5.0 7c66faacef67da765a42d64ae11833ac21b5ff23645d9bcb3508741f780d0dc9",
+  "documentNamespace": "https://spdx.org/spdxdocs/vulkan-memory-allocator-x64-windows-static-md-3.5.0-81d4ee5b-c1d6-4c76-9b49-4674bd659d39",
+  "name": "vulkan-memory-allocator:x64-windows-static-md@3.5.0 e89712419af39301b31a762b194c4c1be30f958be81b8a6de35d36dbd6cb13bc",
   "creationInfo": {
     "creators": [
-      "Tool: vcpkg-2026-09-26-51bf87ca6e9bf3e622d84ff323bd202ab1ca0c0b"
+      "Tool: vcpkg-2026-07-27-98d7cb0cf1f4686a3e43aa5672b6230c1d56bce8"
     ],
-    "created": "2026-10-27T11:25:30Z"
+    "created": "2026-10-28T08:09:51Z"
   },
   "relationships": [
     {
@@ -78,7 +78,7 @@
       "name": "vulkan-memory-allocator",
       "SPDXID": "SPDXRef-port",
       "versionInfo": "3.5.0",
-      "downloadLocation": "git+https://github.com/Microsoft/vcpkg@1be2994ee1a92399fcc489b483dad29662a0083a",
+      "downloadLocation": "git+https://github.com/microsoft/vcpkg@1be2994ee1a92399fcc489b483dad29662a0083a",
       "homepage": "https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -89,7 +89,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:vcpkg/vulkan-memory-allocator@3.5.0?triplet=x64-windows-static-md&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%401be2994ee1a92399fcc489b483dad29662a0083a"
+          "referenceLocator": "pkg:vcpkg/vulkan-memory-allocator@3.5.0?triplet=x64-windows-static-md&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmicrosoft%2Fvcpkg%401be2994ee1a92399fcc489b483dad29662a0083a"
         },
         {
           "referenceCategory": "PERSISTENT-ID",
@@ -101,7 +101,7 @@
     {
       "name": "vulkan-memory-allocator:x64-windows-static-md",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "7c66faacef67da765a42d64ae11833ac21b5ff23645d9bcb3508741f780d0dc9",
+      "versionInfo": "e89712419af39301b31a762b194c4c1be30f958be81b8a6de35d36dbd6cb13bc",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",

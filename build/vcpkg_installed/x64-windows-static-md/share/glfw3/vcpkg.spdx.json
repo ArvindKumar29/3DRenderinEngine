@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/glfw3-x64-windows-static-md-3.5.1-e4541486-3d17-435b-8a8e-ffd0d83818b2",
-  "name": "glfw3:x64-windows-static-md@3.5.1 f2a331cc4b9571fc50b439f73cecb301e54f2d011c0f052d4e8ba60b555d8893",
+  "documentNamespace": "https://spdx.org/spdxdocs/glfw3-x64-windows-static-md-3.5.1-4b50af0e-0230-4c76-85e4-7cf836dd1532",
+  "name": "glfw3:x64-windows-static-md@3.5.1 c5e653383bdb26a0dcf733b6b652baabdd6ec285f873789e4613971882c48fb7",
   "creationInfo": {
     "creators": [
-      "Tool: vcpkg-2026-09-26-51bf87ca6e9bf3e622d84ff323bd202ab1ca0c0b"
+      "Tool: vcpkg-2026-07-27-98d7cb0cf1f4686a3e43aa5672b6230c1d56bce8"
     ],
-    "created": "2026-10-27T11:20:31Z"
+    "created": "2026-10-28T08:08:56Z"
   },
   "relationships": [
     {
@@ -113,7 +113,7 @@
       "name": "glfw3",
       "SPDXID": "SPDXRef-port",
       "versionInfo": "3.5.1",
-      "downloadLocation": "git+https://github.com/Microsoft/vcpkg@983a9c6ea042da294d61cb405600725dd7c22bbd",
+      "downloadLocation": "git+https://github.com/microsoft/vcpkg@983a9c6ea042da294d61cb405600725dd7c22bbd",
       "homepage": "https://github.com/glfw/glfw",
       "licenseConcluded": "Zlib",
       "licenseDeclared": "NOASSERTION",
@@ -124,7 +124,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:vcpkg/glfw3@3.5.1?triplet=x64-windows-static-md&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%40983a9c6ea042da294d61cb405600725dd7c22bbd"
+          "referenceLocator": "pkg:vcpkg/glfw3@3.5.1?triplet=x64-windows-static-md&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmicrosoft%2Fvcpkg%40983a9c6ea042da294d61cb405600725dd7c22bbd"
         },
         {
           "referenceCategory": "PERSISTENT-ID",
@@ -136,7 +136,7 @@
     {
       "name": "glfw3:x64-windows-static-md",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "f2a331cc4b9571fc50b439f73cecb301e54f2d011c0f052d4e8ba60b555d8893",
+      "versionInfo": "c5e653383bdb26a0dcf733b6b652baabdd6ec285f873789e4613971882c48fb7",
       "downloadLocation": "NONE",
       "licenseConcluded": "Zlib",
       "licenseDeclared": "NOASSERTION",
@@ -213,7 +213,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d29b42d54f998aaffc0925e7c0ed1798783fee734166f8a03aada0d905f210a0"
+          "checksumValue": "d0cb4e48b8f2b1233e38a3aae297f05ebd01af199df5e8a14f474cedebde6be4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -261,7 +261,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2e447923f0087c48119980996f0bed17aa0d03b77ef32c0915325e00e9cfaca4"
+          "checksumValue": "361134a484295912f6680094bad76b2d0eb1fbde569e1c509cd35c3d9e9d43ac"
         }
       ],
       "licenseConcluded": "NOASSERTION",

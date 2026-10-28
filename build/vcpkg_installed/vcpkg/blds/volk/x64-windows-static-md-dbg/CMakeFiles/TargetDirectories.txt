@@ -1,0 +1,6 @@
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/volk/x64-windows-static-md-dbg/CMakeFiles/volk.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/volk/x64-windows-static-md-dbg/CMakeFiles/edit_cache.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/volk/x64-windows-static-md-dbg/CMakeFiles/rebuild_cache.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/volk/x64-windows-static-md-dbg/CMakeFiles/list_install_components.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/volk/x64-windows-static-md-dbg/CMakeFiles/install.dir
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/volk/x64-windows-static-md-dbg/CMakeFiles/install/local.dir

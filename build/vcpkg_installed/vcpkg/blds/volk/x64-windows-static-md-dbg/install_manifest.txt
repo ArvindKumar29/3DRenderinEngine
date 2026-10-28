@@ -1,0 +1,7 @@
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/volk_x64-windows-static-md/debug/include/volk.h
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/volk_x64-windows-static-md/debug/include/volk.c
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/volk_x64-windows-static-md/debug/lib/volk.lib
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/volk_x64-windows-static-md/debug/lib/cmake/volk/volkTargets.cmake
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/volk_x64-windows-static-md/debug/lib/cmake/volk/volkTargets-debug.cmake
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/volk_x64-windows-static-md/debug/lib/cmake/volk/volkConfig.cmake
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/volk_x64-windows-static-md/debug/lib/cmake/volk/volkConfigVersion.cmake

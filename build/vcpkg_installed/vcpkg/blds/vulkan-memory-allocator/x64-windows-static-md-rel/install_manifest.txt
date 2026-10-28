@@ -1,0 +1,3 @@
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/vulkan-memory-allocator_x64-windows-static-md/include/vma/vk_mem_alloc.h
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/vulkan-memory-allocator_x64-windows-static-md/share/cmake/VulkanMemoryAllocator/VulkanMemoryAllocatorConfig.cmake
+D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/vulkan-memory-allocator_x64-windows-static-md/share/cmake/VulkanMemoryAllocator/VulkanMemoryAllocatorConfigVersion.cmake

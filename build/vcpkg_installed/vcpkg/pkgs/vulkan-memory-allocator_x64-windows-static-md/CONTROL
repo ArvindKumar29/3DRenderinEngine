@@ -1,0 +1,7 @@
+Package: vulkan-memory-allocator
+Version: 3.5.0
+Depends: vcpkg-cmake:x64-windows, vcpkg-cmake-config:x64-windows
+Architecture: x64-windows-static-md
+Multi-Arch: same
+Abi: e89712419af39301b31a762b194c4c1be30f958be81b8a6de35d36dbd6cb13bc
+Description: Easy to integrate Vulkan memory allocation library from GPUOpen
