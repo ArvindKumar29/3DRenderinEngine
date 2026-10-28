@@ -39,7 +39,6 @@ Installed automatically by vcpkg from `vcpkg.json`:
 | Library | Used for |
 | --- | --- |
 | GLFW | Window, input and Vulkan surface |
-| volk | Loading Vulkan functions |
 | VulkanMemoryAllocator | GPU memory allocation |
 | GLM | Math |
 | spdlog | Logging |
