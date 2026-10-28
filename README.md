@@ -97,7 +97,7 @@ vk-renderer/
 
 ## Benchmarks
 
-Test machine: NVIDIA GeForce RTX 3050 Laptop GPU, Windows 11. Results are published in [docs/BENCHMARKS.md](docs/BENCHMARKS.md) as they are measured.
+Test machine: NVIDIA GeForce RTX 3050 Laptop GPU, Windows 11. Results are published in [docs/BENCHMARKS.md](docs/Benchmarks.md) as they are measured.
 
 ## References and credits
 
