@@ -16,7 +16,7 @@ Early development. The project builds and opens a window; the Vulkan renderer it
 | Instance, device, swap chain | In progress |
 | First triangle with clean validation layers | Next |
 
-Progress notes and measurements are in the [devlog](docs/devlog/) and [benchmarks](docs/BENCHMARKS.md). The full plan is in the [roadmap](docs/ROADMAP.md).
+Progress notes and measurements are in the [devlog](docs/devlog/) and [benchmarks](docs/Benchmarks.md). The full plan is in the [roadmap](docs/RoadMap.md).
 
 ## Goals
 
