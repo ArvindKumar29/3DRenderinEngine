@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/fmt/x64-windows-static-md-rel/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

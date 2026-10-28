@@ -1,8 +1,0 @@
-D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/glfw3_x64-windows-static-md/lib/glfw3.lib
-D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/glfw3_x64-windows-static-md/include/GLFW/glfw3.h
-D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/glfw3_x64-windows-static-md/include/GLFW/glfw3native.h
-D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/glfw3_x64-windows-static-md/lib/cmake/glfw3/glfw3Config.cmake
-D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/glfw3_x64-windows-static-md/lib/cmake/glfw3/glfw3ConfigVersion.cmake
-D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/glfw3_x64-windows-static-md/lib/cmake/glfw3/glfw3Targets.cmake
-D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/glfw3_x64-windows-static-md/lib/cmake/glfw3/glfw3Targets-release.cmake
-D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/pkgs/glfw3_x64-windows-static-md/lib/pkgconfig/glfw3.pc

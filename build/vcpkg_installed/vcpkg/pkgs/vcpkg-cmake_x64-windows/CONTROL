@@ -1,5 +1,0 @@
-Package: vcpkg-cmake
-Version: 2025-08-07
-Architecture: x64-windows
-Multi-Arch: same
-Abi: e1eb7f3289a4eefd6b6366f32c34f6aed51e83dec6d9ac2485dfb9c5e1f3fc38

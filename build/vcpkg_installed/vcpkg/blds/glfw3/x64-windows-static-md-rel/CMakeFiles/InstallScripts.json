@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glfw3/x64-windows-static-md-rel/cmake_install.cmake",
-		"D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/glfw3/x64-windows-static-md-rel/src/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

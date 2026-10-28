@@ -1,6 +1,0 @@
-Package: stb
-Version: 2026-08-02
-Architecture: x64-windows-static-md
-Multi-Arch: same
-Abi: 96235e092e138bece7153c89d6beb13a8e67b03b2d2aac467978f1009d34aa34
-Description: public domain header-only libraries

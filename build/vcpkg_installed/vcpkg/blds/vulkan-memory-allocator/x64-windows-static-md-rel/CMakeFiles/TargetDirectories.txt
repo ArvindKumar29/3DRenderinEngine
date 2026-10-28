@@ -1,5 +1,0 @@
-D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/vulkan-memory-allocator/x64-windows-static-md-rel/CMakeFiles/edit_cache.dir
-D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/vulkan-memory-allocator/x64-windows-static-md-rel/CMakeFiles/rebuild_cache.dir
-D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/vulkan-memory-allocator/x64-windows-static-md-rel/CMakeFiles/list_install_components.dir
-D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/vulkan-memory-allocator/x64-windows-static-md-rel/CMakeFiles/install.dir
-D:/dev/3D_RENDERING_ENGINE/RenderingEngine/build/vcpkg_installed/vcpkg/blds/vulkan-memory-allocator/x64-windows-static-md-rel/CMakeFiles/install/local.dir
