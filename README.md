@@ -74,7 +74,7 @@ Reopen the terminal after `setx`.
 **Build and run**
 
 ```powershell
-git clone https://github.com/ArvindKumar29/3DRenderinEngine.git
+git clone https://github.com/ArvindKumar29/3DRenderingEngine.git
 cd vk-renderer
 cmake --preset default
 cmake --build --preset debug
