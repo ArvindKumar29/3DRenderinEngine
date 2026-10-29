@@ -33,11 +33,11 @@ namespace VKRENDERER
 		}
 
 		// Get the required Validation Layers
-		spdlog::critical("Getting required validation Layers!!!");
+		spdlog::info("Getting required validation Layers!!!");
 		validationLayers.getRequiredValidationLayers(requiredLayers, ctx);
 
 		// Get the required Instance Extensions 
-		spdlog::critical("Getting required Instance Extensions!!!");
+		spdlog::info("Getting required Instance Extensions!!!");
 		auto requiredExtensions = getRequiredExtensions();
 
 		//auto extensionProperties = ctx.enumerateInstanceExtensionProperties();

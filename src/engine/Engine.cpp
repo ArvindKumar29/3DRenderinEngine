@@ -19,12 +19,19 @@ namespace VKRENDERER
 		// Creating surface for rendering
 		window.initSurface(vulkanInstance.instance, m_window);
 		m_Surface = &window.surface;
-		spdlog::info("Rendering engine initialized successfully with window, instance, context and surface.");
 
 		// choosing appropriate physical device...
 		device.getPhysicalDevice(vulkanInstance.instance, window.surface, deviceExtensions);
 		pd = device.physicalDevice;
 		spdlog::info("Physical Device selection done!!!");
+
+		spdlog::info("Creating Logical Device...");
+		device.createLogicalDevice(deviceExtensions);
+		window.createSwapChain(device.physicalDevice, device.logicalDevice);
+		m_SwapChain = &window.swapChain;
+		spdlog::info("Swapchain Created for the Engine...");
+
+		spdlog::info("Rendering engine initialized successfully with window, instance, context, surface, Graphics Queue and Physical and Logical Devices and swapchain...");
 	}
 	
 

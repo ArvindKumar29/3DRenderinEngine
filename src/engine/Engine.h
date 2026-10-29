@@ -20,6 +20,7 @@ namespace VKRENDERER
 		GLFWwindow* m_window;
 		vk::raii::Context ctx;
 		vk::raii::SurfaceKHR* m_Surface = nullptr;
+		vk::raii::SwapchainKHR* m_SwapChain = nullptr;
 		vk::raii::PhysicalDevice pd = nullptr;
 		Window window;
 		ValidationLayers validationLayers;

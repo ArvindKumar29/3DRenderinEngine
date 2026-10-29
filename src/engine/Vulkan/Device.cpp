@@ -53,4 +53,41 @@ namespace VKRENDERER
 		physicalDevice = *devIter;
 	}
 
+	void Device::createLogicalDevice(std::vector<char const*> requiredDeviceExtensions)
+	{
+		std::vector<vk::QueueFamilyProperties> qfp = physicalDevice.getQueueFamilyProperties();
+
+		auto graphicsQueueFamilyProperties = std::ranges::find_if(qfp, [](auto const& qfp) { return (qfp.queueFlags & vk::QueueFlagBits::eGraphics) != static_cast<vk::QueueFlags>(0); });
+		auto graphicsIndex = static_cast<uint32_t>(std::distance(qfp.begin(), graphicsQueueFamilyProperties));
+
+		vk::StructureChain < vk::PhysicalDeviceFeatures2,
+			vk::PhysicalDeviceVulkan11Features,
+			vk::PhysicalDeviceVulkan13Features,
+			vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT>
+			featureChain(
+				vk::PhysicalDeviceFeatures2(),
+				vk::PhysicalDeviceVulkan11Features().setShaderDrawParameters(true),
+				vk::PhysicalDeviceVulkan13Features().setDynamicRendering(true),
+				vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT().setExtendedDynamicState(true)
+			);
+
+		float queuePriority = 0.5f;
+		vk::DeviceQueueCreateInfo deviceQueueCreateInfo = vk::DeviceQueueCreateInfo()
+		.setQueueFamilyIndex(graphicsIndex)
+		.setQueueCount(1)
+		.setPQueuePriorities(&queuePriority);
+
+		vk::DeviceCreateInfo deviceCreateInfo = vk::DeviceCreateInfo()
+			.setPNext(&featureChain.get<vk::PhysicalDeviceFeatures2>())
+			.setQueueCreateInfoCount(1)
+			.setPQueueCreateInfos(&deviceQueueCreateInfo)
+			.setEnabledExtensionCount(static_cast<uint32_t>(requiredDeviceExtensions.size()))
+			.setPpEnabledExtensionNames(requiredDeviceExtensions.data());
+
+		logicalDevice = vk::raii::Device(physicalDevice, deviceCreateInfo);
+		graphicsQueue = vk::raii::Queue(logicalDevice, graphicsIndex, 0);
+		
+		spdlog::info("Logical Devie and Graphics Queue Created Successfully!!!");
+	}
+
 }

@@ -8,7 +8,8 @@ namespace VKRENDERER
 		glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 		glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
-		return glfwCreateWindow(width, height, title, nullptr, nullptr);
+		window = glfwCreateWindow(width, height, title, nullptr, nullptr);
+		return window;
 	}
 
 
@@ -21,5 +22,77 @@ namespace VKRENDERER
 		}
 		surface = vk::raii::SurfaceKHR(instance, _surface);
 		spdlog::info("Window Surface is Created successfully");
+	}
+
+	void Window::createSwapChain(vk::raii::PhysicalDevice& pd, vk::raii::Device& ld)
+	{
+		auto surfaceCapabilities = pd.getSurfaceCapabilitiesKHR(*surface);
+		swapChainExtent = chooseSwapExtent(surfaceCapabilities, window);
+		uint32_t minImageCount = chooseSwapMinImageCount(surfaceCapabilities);
+
+		std::vector<vk::SurfaceFormatKHR> availableFormats = pd.getSurfaceFormatsKHR(*surface);
+		swapChainSurfaceFormat = chooseSwapSurfaceFormat(availableFormats);
+
+		std::vector<vk::PresentModeKHR> availablePresentModes = pd.getSurfacePresentModesKHR(*surface);
+		vk::PresentModeKHR presentMode = choosePresentMode(availablePresentModes);
+
+		vk::SwapchainCreateInfoKHR swapChainCreateInfo = vk::SwapchainCreateInfoKHR()
+			.setSurface(*surface)
+			.setMinImageCount(minImageCount)
+			.setImageFormat(swapChainSurfaceFormat.format)
+			.setImageColorSpace(swapChainSurfaceFormat.colorSpace)
+			.setImageExtent(swapChainExtent)
+			.setImageArrayLayers(1)
+			.setImageUsage(vk::ImageUsageFlagBits::eColorAttachment)
+			.setImageSharingMode(vk::SharingMode::eExclusive)
+			.setPreTransform(surfaceCapabilities.currentTransform)
+			.setCompositeAlpha(vk::CompositeAlphaFlagBitsKHR::eOpaque)
+			.setPresentMode(presentMode)
+			.setClipped(true);
+
+		swapChain = vk::raii::SwapchainKHR(ld, swapChainCreateInfo);
+		swapChainImages = swapChain.getImages();
+	}
+
+	vk::SurfaceFormatKHR Window::chooseSwapSurfaceFormat(std::vector<vk::SurfaceFormatKHR> const& availableFormats)
+	{
+		const auto formatIt = std::ranges::find_if(
+			availableFormats, [](const auto& format) {return (format.format == vk::Format::eB8G8R8A8Srgb && format.colorSpace == vk::ColorSpaceKHR::eSrgbNonlinear);
+			});
+		return formatIt != availableFormats.end() ? *formatIt : availableFormats[0];
+	}
+
+	vk::PresentModeKHR Window::choosePresentMode(std::vector<vk::PresentModeKHR> const& availablePresentModes)
+	{
+		assert(std::ranges::any_of(availablePresentModes, [](auto presentMode) { return presentMode == vk::PresentModeKHR::eFifo; }));
+		return std::ranges::any_of(availablePresentModes,
+			[](const vk::PresentModeKHR value) { return vk::PresentModeKHR::eMailbox == value; }) ?
+			vk::PresentModeKHR::eMailbox :
+			vk::PresentModeKHR::eFifo;
+	}
+
+	vk::Extent2D Window::chooseSwapExtent(vk::SurfaceCapabilitiesKHR const &capabilities, GLFWwindow* window)
+	{
+		if (capabilities.currentExtent.width != std::numeric_limits<uint32_t>::max())
+		{
+			return capabilities.currentExtent;
+		}
+		int width, height;
+		glfwGetFramebufferSize(window, &width, &height);
+
+		return {
+			std::clamp<uint32_t>(width, capabilities.minImageExtent.width, capabilities.maxImageExtent.width),
+			std::clamp<uint32_t>(height, capabilities.minImageExtent.height, capabilities.maxImageExtent.height)
+		};
+	}
+
+	uint32_t Window::chooseSwapMinImageCount(vk::SurfaceCapabilitiesKHR const& capabilities)
+	{
+		auto minImageCount = std::max(3u, capabilities.minImageCount);
+		if ((0 < capabilities.maxImageCount) && (capabilities.maxImageCount < minImageCount))
+		{
+			minImageCount = capabilities.maxImageCount;
+		}
+		return minImageCount;
 	}
 }
