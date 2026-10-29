@@ -6,6 +6,7 @@ namespace VKRENDERER
 	{
 		// Check support of vulkan 1.3 or above
 		bool supportVulkan_1_3 = pd.getProperties().apiVersion >= VK_API_VERSION_1_3;
+		bool isDGPU = pd.getProperties().deviceType == vk::PhysicalDeviceType::eDiscreteGpu ? true : false;
 
 		// Check queue family support for graphics and present
 		auto queueFamilies = pd.getQueueFamilyProperties();
@@ -35,13 +36,26 @@ namespace VKRENDERER
 		bool supportRequiredFeatures = features.template get<vk::PhysicalDeviceVulkan11Features>().shaderDrawParameters &&
 			features.template get<vk::PhysicalDeviceVulkan13Features>().dynamicRendering &&
 			features.template get<vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT>().extendedDynamicState;
-
-		return supportVulkan_1_3 && supportGraphicsAndPresent && supportAllRequiredExtensions && supportRequiredFeatures;
+		if (hasDGPU && !isDGPU)
+			return false;
+		else
+			return supportVulkan_1_3 && supportGraphicsAndPresent && supportAllRequiredExtensions && supportRequiredFeatures;
 	}
 
 	void VKRENDERER::Device::getPhysicalDevice(vk::raii::Instance& instance, vk::raii::SurfaceKHR& surface, std::vector<char const*> requiredDeviceExtensions)
 	{
+		spdlog::info("============================GPU DETAILS================================");
 		auto physicalDevices = instance.enumeratePhysicalDevices();
+		for (auto pd : physicalDevices)
+		{
+			spdlog::info("GPU found:");
+			spdlog::info("Device Name: {}", pd.getProperties().deviceName.data());
+			spdlog::info("Device Type: {}", pd.getProperties().deviceType == vk::PhysicalDeviceType::eDiscreteGpu);
+			if (pd.getProperties().deviceType == vk::PhysicalDeviceType::eDiscreteGpu){
+				hasDGPU = true;
+				break;
+			}
+		}
 
 		auto const devIter = std::ranges::find_if(physicalDevices, [&](auto pd) { return isDeviceSuitable(pd, surface, requiredDeviceExtensions); });
 
@@ -51,6 +65,10 @@ namespace VKRENDERER
 		}
 
 		physicalDevice = *devIter;
+		//std::vector<vk::ExtensionProperties> extensions = physicalDevice.enumerateDeviceExtensionProperties();
+		//spdlog::info("==========================GPU supporte extensions details===========================");
+		//for (auto &ext : extensions)
+		//	spdlog::info("\tExtension name: {}, Version: {}", ext.extensionName, ext.specVersion);
 	}
 
 	void Device::createLogicalDevice(std::vector<char const*> requiredDeviceExtensions)
@@ -86,8 +104,8 @@ namespace VKRENDERER
 
 		logicalDevice = vk::raii::Device(physicalDevice, deviceCreateInfo);
 		graphicsQueue = vk::raii::Queue(logicalDevice, graphicsIndex, 0);
-		
-		spdlog::info("Logical Devie and Graphics Queue Created Successfully!!!");
+
+		//spdlog::info("Logical Devie and Graphics Queue Created Successfully!!!");
 	}
 
 }

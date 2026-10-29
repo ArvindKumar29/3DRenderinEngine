@@ -8,13 +8,13 @@ namespace VKRENDERER
 		// Creating Window
 		uint32_t width = 1920, height = 1080;
 		const char* title = "Rendering Engine";
-		spdlog::info("Initializing the rendering engine...");
+		//spdlog::info("Initializing the rendering engine...");
 		m_window = window.initWindow(width, height, title);
-		spdlog::info("GLFW Window Created ...");
+		spdlog::info("GLFW Window Created ... {}, {}, {}", width, height, title);
 
 		// Creating Vulkan Instance and Setting up Validation Layers
 		vulkanInstance.init(ctx);
-		spdlog::info("Vulkan Instance for rendering engine initialized...");
+		//spdlog::info("Vulkan Instance for rendering engine initialized...");
 		
 		// Creating surface for rendering
 		window.initSurface(vulkanInstance.instance, m_window);
@@ -23,15 +23,25 @@ namespace VKRENDERER
 		// choosing appropriate physical device...
 		device.getPhysicalDevice(vulkanInstance.instance, window.surface, deviceExtensions);
 		pd = device.physicalDevice;
-		spdlog::info("Physical Device selection done!!!");
+		vk::PhysicalDeviceProperties pdProperties = pd.getProperties();
+		//spdlog::info("Physical Device selection done!!!", pdProperties.deviceName.data());
+		spdlog::info("Selected Device Info:");
+		spdlog::info("Name: {}", pdProperties.deviceName.data());
+		spdlog::info("Type: {}", pdProperties.deviceType == vk::PhysicalDeviceType::eDiscreteGpu);
+		spdlog::info("Vulkan API Version: {}.{}.{}",
+			VK_VERSION_MAJOR(pdProperties.apiVersion),
+			VK_VERSION_MINOR(pdProperties.apiVersion),
+			VK_VERSION_PATCH(pdProperties.apiVersion));
 
-		spdlog::info("Creating Logical Device...");
+		//spdlog::info("Creating Logical Device...");
 		device.createLogicalDevice(deviceExtensions);
 		window.createSwapChain(device.physicalDevice, device.logicalDevice);
 		m_SwapChain = &window.swapChain;
-		spdlog::info("Swapchain Created for the Engine...");
+		//spdlog::info("Swapchain Created for the Engine...");
 
-		spdlog::info("Rendering engine initialized successfully with window, instance, context, surface, Graphics Queue and Physical and Logical Devices and swapchain...");
+		window.createImageViews(device.logicalDevice);
+
+		spdlog::info("Rendering engine initialized successfully with window, instance, context, surface, Graphics Queue, Image views and Physical and Logical Devices and swapchain...");
 	}
 	
 

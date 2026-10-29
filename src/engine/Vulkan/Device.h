@@ -7,6 +7,7 @@ namespace VKRENDERER
 {
 	class Device
 	{
+		bool hasDGPU = false;
 		bool isDeviceSuitable(vk::raii::PhysicalDevice& const pd, vk::raii::SurfaceKHR& surface, std::vector<char const*> requiredDeviceExtensions);
 	public:
 		void getPhysicalDevice(vk::raii::Instance& instance, vk::raii::SurfaceKHR& surface, std::vector<char const*> requiredDeviceExtensions);

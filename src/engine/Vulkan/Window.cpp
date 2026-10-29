@@ -21,7 +21,7 @@ namespace VKRENDERER
 			throw std::runtime_error("Failed to create window surface!!!");
 		}
 		surface = vk::raii::SurfaceKHR(instance, _surface);
-		spdlog::info("Window Surface is Created successfully");
+		//spdlog::info("Window Surface is Created successfully");
 	}
 
 	void Window::createSwapChain(vk::raii::PhysicalDevice& pd, vk::raii::Device& ld)
@@ -94,5 +94,28 @@ namespace VKRENDERER
 			minImageCount = capabilities.maxImageCount;
 		}
 		return minImageCount;
+	}
+
+	void Window::createImageViews(vk::raii::Device& ld)
+	{
+		assert(swapChainImageViews.empty());
+
+		vk::ImageViewCreateInfo imageViewCreateInfo = vk::ImageViewCreateInfo()
+			.setViewType(vk::ImageViewType::e2D)
+			.setFormat(swapChainSurfaceFormat.format)
+			.setSubresourceRange(vk::ImageSubresourceRange()
+				.setAspectMask(vk::ImageAspectFlagBits::eColor)
+				.setBaseMipLevel(0)
+				.setLevelCount(1)
+				.setBaseArrayLayer(0)
+				.setLayerCount(1));
+	
+		for (auto& image : swapChainImages)
+		{
+			imageViewCreateInfo.image = image;
+			swapChainImageViews.emplace_back(ld, imageViewCreateInfo);
+		}
+
+		spdlog::info("Image view created...");
 	}
 }

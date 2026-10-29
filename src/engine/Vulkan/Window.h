@@ -26,6 +26,7 @@ namespace VKRENDERER
 		GLFWwindow* initWindow(uint32_t width, uint32_t height, const char* title);
 		void initSurface(vk::raii::Instance& instance, GLFWwindow* window);
 		void createSwapChain(vk::raii::PhysicalDevice& pd, vk::raii::Device& ld);
+		void createImageViews(vk::raii::Device& ld);
 	
 		GLFWwindow* window;
 		vk::raii::SurfaceKHR surface = nullptr;
