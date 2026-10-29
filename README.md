@@ -2,8 +2,9 @@
 
 A real-time 3D renderer written from scratch in C++20 and Vulkan 1.3. I am building it to learn graphics and engine programming properly, and to document the process in public.
 
-<!-- Add a screenshot or GIF here as soon as something renders:
-![vk-renderer](docs/media/hero.png) -->
+Architecture of the engine, upto latest progresee, is shown as follows:
+<img width="8192" height="1189" alt="Architecture Diagram" src="https://github.com/user-attachments/assets/44cdb0b9-90d5-4729-9620-7d6e79f978ab" />
+
 
 ## Status
 
