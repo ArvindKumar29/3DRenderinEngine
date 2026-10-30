@@ -5,9 +5,6 @@ A real-time 3D renderer written from scratch in C++20 and Vulkan 1.3/1.4 (`vulka
 <p align="center">
   <img src="Results/First%20Triangle.png" alt="First Triangle Rendered in Vulkan 1.3" width="480" />
 </p>
-## Architecture diagram
-<p align="center"><img src="docs/media/Architecture%20Diagram.png" alt="Milestone 1 Architecture Diagram" width="550" /></p>
-
 
 ## Status
 
