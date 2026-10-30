@@ -74,14 +74,16 @@ Windows 10 or 11 (x64) only for now.
 **One-time vcpkg setup**
 
 ```powershell
+
 git clone [https://github.com/microsoft/vcpkg.git](https://github.com/microsoft/vcpkg.git) D:\dev\vcpkg
 D:\dev\vcpkg\bootstrap-vcpkg.bat -disableMetrics
 setx VCPKG_ROOT "D:\dev\vcpkg"
+```
 Reopen the terminal after `setx`.
 
 **Build and run**
 
-```
+```powershell
 git clone https://github.com/ArvindKumar29/3DRenderingEngine.git
 cd RenderingEngine
 cmake --preset default
@@ -94,7 +96,7 @@ The first configure takes several minutes while vcpkg builds the dependencies.
 
 ## Project structure
 
-```
+```txt
 RenderingEngine/
   cmake/        Build helper scripts (automatic SPIR-V shader compilation)
   src/engine/   Core engine orchestrator and Vulkan backend (src/engine/Vulkan/)
@@ -103,9 +105,7 @@ RenderingEngine/
   assets/       Models and textures
   Results/      Rendered output screenshots
   docs/         Devlogs, architecture diagrams (docs/media/), benchmarks and roadmap
-
 ```
-
 ## Benchmarks
 
 Test machine: NVIDIA GeForce RTX 3050 Laptop GPU, Windows 11. Results are published in [docs/Benchmarks.md](docs/Benchmarks.md) as they are measured.
