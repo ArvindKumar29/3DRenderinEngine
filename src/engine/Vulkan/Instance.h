@@ -10,6 +10,7 @@ namespace VKRENDERER
 	{
 		void createInstance(vk::raii::Context& ctx);
 	public:
+
 		void init(vk::raii::Context& ctx);
 		std::vector<char const*> getRequiredExtensions();
 		vk::raii::Instance instance = nullptr;

@@ -7,7 +7,7 @@ file(GLOB_RECURSE ENGINE_SOURCES CONFIGURE_DEPENDS
 
 # 2. TARGET CREATION
 # Bundles all the discovered C++ files into a single Static Library named "engine".
-add_library(engine STATIC ${ENGINE_SOURCES} "Vulkan/Instance.h" "Vulkan/Instance.cpp" "Vulkan/ValidationLayers.h" "Vulkan/ValidationLayers.cpp" "Vulkan/Device.h" "Vulkan/Device.cpp" "Vulkan/Window.cpp" "Vulkan/Window.h")
+add_library(engine STATIC ${ENGINE_SOURCES} "Vulkan/Instance.h" "Vulkan/Instance.cpp" "Vulkan/ValidationLayers.h" "Vulkan/ValidationLayers.cpp" "Vulkan/Device.h" "Vulkan/Device.cpp" "Vulkan/Window.cpp" "Vulkan/Window.h" "Renderer/Pipeline.h" "Renderer/Pipeline.cpp" "Renderer/CommandPool.cpp")
 
 # Automatically mirrors your actual folder structure (e.g., core/, renderer/) inside 
 # Visual Studio's Solution Explorer so everything stays organized.

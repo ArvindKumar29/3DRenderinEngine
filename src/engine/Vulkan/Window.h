@@ -17,19 +17,28 @@ namespace VKRENDERER
 		vk::Extent2D chooseSwapExtent(vk::SurfaceCapabilitiesKHR const &capabilities, GLFWwindow* window);
 		uint32_t chooseSwapMinImageCount(vk::SurfaceCapabilitiesKHR const &capabilities);
 
-		std::vector<vk::Image>           swapChainImages;
-		vk::SurfaceFormatKHR             swapChainSurfaceFormat;
-		vk::Extent2D                     swapChainExtent;
-		std::vector<vk::raii::ImageView> swapChainImageViews;
 
 	public:
+
 		GLFWwindow* initWindow(uint32_t width, uint32_t height, const char* title);
 		void initSurface(vk::raii::Instance& instance, GLFWwindow* window);
 		void createSwapChain(vk::raii::PhysicalDevice& pd, vk::raii::Device& ld);
 		void createImageViews(vk::raii::Device& ld);
+		void transitionImageLayout(vk::raii::CommandBuffer& cmdBuffer,
+								   uint32_t				   imageIndex,
+								   vk::ImageLayout         old_layout,
+								   vk::ImageLayout         new_layout,
+								   vk::AccessFlags2        src_access_mask,
+								   vk::AccessFlags2        dst_access_mask,
+								   vk::PipelineStageFlags2 src_stage_mask,
+								   vk::PipelineStageFlags2 dst_stage_mask);
 	
 		GLFWwindow* window;
 		vk::raii::SurfaceKHR surface = nullptr;
 		vk::raii::SwapchainKHR swapChain = nullptr;
+		vk::SurfaceFormatKHR swapChainSurfaceFormat;
+		std::vector<vk::raii::ImageView> swapChainImageViews;
+		vk::Extent2D                     swapChainExtent;
+		std::vector<vk::Image>           swapChainImages;
 	};
 }

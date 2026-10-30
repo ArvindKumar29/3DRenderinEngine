@@ -78,16 +78,18 @@ namespace VKRENDERER
 		auto graphicsQueueFamilyProperties = std::ranges::find_if(qfp, [](auto const& qfp) { return (qfp.queueFlags & vk::QueueFlagBits::eGraphics) != static_cast<vk::QueueFlags>(0); });
 		auto graphicsIndex = static_cast<uint32_t>(std::distance(qfp.begin(), graphicsQueueFamilyProperties));
 
-		vk::StructureChain < vk::PhysicalDeviceFeatures2,
-			vk::PhysicalDeviceVulkan11Features,
-			vk::PhysicalDeviceVulkan13Features,
-			vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT>
-			featureChain(
-				vk::PhysicalDeviceFeatures2(),
-				vk::PhysicalDeviceVulkan11Features().setShaderDrawParameters(true),
-				vk::PhysicalDeviceVulkan13Features().setDynamicRendering(true),
-				vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT().setExtendedDynamicState(true)
-			);
+		//vk::StructureChain < vk::PhysicalDeviceFeatures2,
+		//	vk::PhysicalDeviceVulkan11Features,
+		//	vk::PhysicalDeviceVulkan13Features,
+		//	vk::PhysicalDeviceVulkan13Features,
+		//	vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT>
+		//	featureChain(
+		//		vk::PhysicalDeviceFeatures2(),
+		//		vk::PhysicalDeviceVulkan11Features().setShaderDrawParameters(true),
+		//		vk::PhysicalDeviceVulkan13Features().setDynamicRendering(true),
+		//		vk::PhysicalDeviceVulkan13Features().setSynchronization2(true),
+		//		vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT().setExtendedDynamicState(true)
+		//	);
 
 		float queuePriority = 0.5f;
 		vk::DeviceQueueCreateInfo deviceQueueCreateInfo = vk::DeviceQueueCreateInfo()
@@ -95,8 +97,20 @@ namespace VKRENDERER
 		.setQueueCount(1)
 		.setPQueuePriorities(&queuePriority);
 
+		graphicsQueueIndex = graphicsIndex;
+
+		vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT vkExtFeatures = vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT()
+			.setExtendedDynamicState(vk::True);
+		vk::PhysicalDeviceVulkan13Features vk13Features = vk::PhysicalDeviceVulkan13Features()
+			.setDynamicRendering(vk::True)
+			.setSynchronization2(vk::True)
+			.setPNext(&vkExtFeatures);
+		vk::PhysicalDeviceVulkan11Features vk11Features = vk::PhysicalDeviceVulkan11Features()
+			.setShaderDrawParameters(vk::True)
+			.setPNext(&vk13Features);
+
 		vk::DeviceCreateInfo deviceCreateInfo = vk::DeviceCreateInfo()
-			.setPNext(&featureChain.get<vk::PhysicalDeviceFeatures2>())
+			.setPNext(&vk11Features)
 			.setQueueCreateInfoCount(1)
 			.setPQueueCreateInfos(&deviceQueueCreateInfo)
 			.setEnabledExtensionCount(static_cast<uint32_t>(requiredDeviceExtensions.size()))
@@ -104,7 +118,7 @@ namespace VKRENDERER
 
 		logicalDevice = vk::raii::Device(physicalDevice, deviceCreateInfo);
 		graphicsQueue = vk::raii::Queue(logicalDevice, graphicsIndex, 0);
-
+		
 		//spdlog::info("Logical Devie and Graphics Queue Created Successfully!!!");
 	}
 

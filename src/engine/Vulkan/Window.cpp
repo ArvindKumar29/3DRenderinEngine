@@ -118,4 +118,39 @@ namespace VKRENDERER
 
 		spdlog::info("Image view created...");
 	}
+
+	void Window::transitionImageLayout(vk::raii::CommandBuffer& cmdBuffer,
+		uint32_t imageIndex, 
+		vk::ImageLayout old_layout, 
+		vk::ImageLayout new_layout, 
+		vk::AccessFlags2 src_access_mask, 
+		vk::AccessFlags2 dst_access_mask, 
+		vk::PipelineStageFlags2 src_stage_mask, 
+		vk::PipelineStageFlags2 dst_stage_mask)
+	{
+		vk::ImageMemoryBarrier2 barrier = vk::ImageMemoryBarrier2()
+			.setSrcStageMask(src_stage_mask)
+			.setDstStageMask(dst_stage_mask)
+			.setSrcAccessMask(src_access_mask)
+			.setDstAccessMask(dst_access_mask)
+			.setOldLayout(old_layout)
+			.setNewLayout(new_layout)
+			.setSrcQueueFamilyIndex(VK_QUEUE_FAMILY_IGNORED)
+			.setDstQueueFamilyIndex(VK_QUEUE_FAMILY_IGNORED)
+			.setImage(swapChainImages[imageIndex])
+			.setSubresourceRange(vk::ImageSubresourceRange()
+			.setAspectMask(vk::ImageAspectFlagBits::eColor)
+			.setBaseMipLevel(0)
+			.setLevelCount(1)
+			.setBaseArrayLayer(0)
+			.setLayerCount(1));
+		vk::DependencyInfo dependencyInfo = vk::DependencyInfo()
+			.setDependencyFlags(vk::DependencyFlagBits::eByRegion)
+			.setImageMemoryBarrierCount(1)
+			.setImageMemoryBarriers(barrier)
+			.setPImageMemoryBarriers(&barrier);
+
+		cmdBuffer.pipelineBarrier2(dependencyInfo);
+		
+	}
 }

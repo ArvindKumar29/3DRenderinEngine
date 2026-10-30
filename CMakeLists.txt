@@ -54,8 +54,8 @@ find_package(Vulkan REQUIRED COMPONENTS glslc)
 include(cmake/CompileShaders.cmake)
 
 # Executes the function: Tells it to look in your raw "shaders/" folder, compile everything, 
-# output the .spv binaries into "build/shaders/", and groups them into a master target named "shaders".
-add_shader_target(shaders ${CMAKE_SOURCE_DIR}/shaders ${CMAKE_BINARY_DIR}/shaders)
+# output the .spv binaries into "shaders/", and groups them into a master target named "shaders".
+add_shader_target(shaders ${CMAKE_SOURCE_DIR}/src/engine/Shaders ${CMAKE_SOURCE_DIR}/shaders)
 
 # ==============================================================================
 # 5. MODULAR PROJECT DELEGATION
@@ -64,6 +64,7 @@ add_shader_target(shaders ${CMAKE_SOURCE_DIR}/shaders ${CMAKE_BINARY_DIR}/shader
 # CMake will now dive into these subfolders and look for smaller, dedicated CMakeLists.txt files.
 add_subdirectory(src/engine) # Handles compiling your engine logic into a library (.lib).
 add_subdirectory(src/app)    # Handles compiling your actual game loop into an executable (.exe).
+target_compile_definitions(engine PUBLIC ENGINE_ROOT_DIR="${CMAKE_SOURCE_DIR}/")
 
 # ==============================================================================
 # 6. IDE QUALITY OF LIFE

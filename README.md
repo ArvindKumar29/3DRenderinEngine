@@ -1,22 +1,33 @@
 # 3D Rendering Engine
 
-A real-time 3D renderer written from scratch in C++20 and Vulkan 1.3. I am building it to learn graphics and engine programming properly, and to document the process in public.
+A real-time 3D renderer written from scratch in C++20 and Vulkan 1.3/1.4 (`vulkan_raii.hpp`). I am building it to learn graphics and engine programming properly, and to document the process in public.
 
-<!-- Add a screenshot or GIF here as soon as something renders:
-![vk-renderer](docs/media/hero.png) -->
+<p align="center">
+  <img src="Results/First%20Triangle.png" alt="First Triangle Rendered in Vulkan 1.3" width="480" />
+</p>
 
 ## Status
 
-Early development. The project builds and opens a window; the Vulkan renderer itself is in progress.
+**Milestone 1 Complete:** The engine initializes Vulkan 1.3 Dynamic Rendering and Synchronization2 on the discrete GPU and renders its first RGB triangle. Currently refactoring the low-level Vulkan backend and fixing a window-close destruction order bug before moving to buffers and camera systems.
 
 | Area | State |
 | --- | --- |
 | Build system (CMake and vcpkg) | Done |
-| Window creation | Done |
-| Instance, device, swap chain | In progress |
-| First triangle with clean validation layers | Next |
+| Window creation & Vulkan Surface | Done |
+| Instance, Physical & Logical Device, Swapchain | Done |
+| First triangle with Dynamic Rendering & Sync2 | Done |
+| Shutdown cleanup & `Vulkan/` facade refactor | In progress |
+| Input, Camera, Vertex & Index buffers | Next |
 
-Progress notes and measurements are in the [devlog](docs/devlog/) and [benchmarks](docs/Benchmarks.md). The full plan is in the [roadmap](docs/RoadMap.md).
+Progress notes and debugging logs are in the [devlog](docs/devlog/) and [benchmarks](docs/Benchmarks.md). The full plan is in the [roadmap](docs/RoadMap.md).
+
+## Architecture (Milestone 1)
+
+All low-level Vulkan objects (`Instance`, `ValidationLayers`, `Window`, `Device`, `Pipeline`, and `CommandPool`) are encapsulated inside the `Vulkan/` backend module, keeping `Engine` clean for high-level rendering features.
+
+<p align="center">
+  <img src="docs/media/Architecture%20Diagram.png" alt="Milestone 1 Architecture Diagram" width="550" />
+</p>
 
 ## Goals
 
@@ -26,7 +37,7 @@ Progress notes and measurements are in the [devlog](docs/devlog/) and [benchmark
 
 ## Planned features
 
-**Foundation:** instance, device and swapchain; frames in flight; shader compilation; GPU memory and staging uploads; depth buffering; free camera; textures; glTF loading; bindless textures; physically based shading with image-based lighting; shadow maps; ImGui debug UI; CPU and GPU profiling.
+**Foundation:** instance, device and swapchain; frames in flight; shader compilation; GPU memory and staging uploads; vertex and index buffers; depth buffering; free camera & input; textures; glTF loading; bindless textures; physically based shading with image-based lighting; shadow maps; ImGui debug UI; CPU and GPU profiling.
 
 **Core:** HDR, tone mapping and bloom; MSAA and SSAO; cascaded shadow maps; indirect rendering with CPU culling and LODs; skeletal animation; asynchronous asset loading and a job system; texture compression.
 
@@ -54,30 +65,29 @@ Windows 10 or 11 (x64) only for now.
 
 **Requirements**
 
-- Visual Studio 2022 with the "Desktop development with C++" workload
+- Visual Studio 2022 / 2026 with the "Desktop development with C++" workload
 - CMake 3.21 or newer
 - Vulkan SDK 1.3 or newer (sets the `VULKAN_SDK` environment variable)
 - Git, and vcpkg with the `VCPKG_ROOT` environment variable set
-- A GPU and driver with Vulkan 1.3 support
+- A GPU and driver with Vulkan 1.3+ support
 
 **One-time vcpkg setup**
 
 ```powershell
-git clone https://github.com/microsoft/vcpkg.git D:\dev\vcpkg
-C:\dev\vcpkg\bootstrap-vcpkg.bat -disableMetrics
+git clone [https://github.com/microsoft/vcpkg.git](https://github.com/microsoft/vcpkg.git) D:\dev\vcpkg
+D:\dev\vcpkg\bootstrap-vcpkg.bat -disableMetrics
 setx VCPKG_ROOT "D:\dev\vcpkg"
-```
-
 Reopen the terminal after `setx`.
 
 **Build and run**
 
-```powershell
+```
 git clone https://github.com/ArvindKumar29/3DRenderingEngine.git
-cd vk-renderer
+cd RenderingEngine
 cmake --preset default
 cmake --build --preset debug
 .\build\bin\Debug\app.exe
+
 ```
 
 The first configure takes several minutes while vcpkg builds the dependencies.
@@ -85,27 +95,32 @@ The first configure takes several minutes while vcpkg builds the dependencies.
 ## Project structure
 
 ```
-vk-renderer/
-  cmake/        Build helper scripts (shader compilation)
-  src/engine/   The renderer library; all engine code lives here
-  src/app/      The executable that opens a window and runs the renderer
-  shaders/      GLSL shaders, compiled to SPIR-V at build time
+RenderingEngine/
+  cmake/        Build helper scripts (automatic SPIR-V shader compilation)
+  src/engine/   Core engine orchestrator and Vulkan backend (src/engine/Vulkan/)
+  src/app/      Executable entry point (main.cpp)
+  shaders/      GLSL shaders (.vert, .frag), compiled to SPIR-V at build time
   assets/       Models and textures
-  docs/         Devlog, benchmarks and roadmap
+  Results/      Rendered output screenshots
+  docs/         Devlogs, architecture diagrams (docs/media/), benchmarks and roadmap
+
 ```
 
 ## Benchmarks
 
-Test machine: NVIDIA GeForce RTX 3050 Laptop GPU, Windows 11. Results are published in [docs/BENCHMARKS.md](docs/Benchmarks.md) as they are measured.
+Test machine: NVIDIA GeForce RTX 3050 Laptop GPU, Windows 11. Results are published in [docs/Benchmarks.md](docs/Benchmarks.md) as they are measured.
 
 ## References and credits
 
 I use these as references while writing my own code. Where an approach follows a reference closely, the devlog says so.
 
-- *3D Graphics Rendering Cookbook* by Sergey Kosarevsky and Viktor Latypov
-- *Game Engine Architecture* by Jason Gregory
-- [vkguide.dev](https://vkguide.dev)
-- Test scenes from the [Khronos glTF Sample Assets](https://github.com/KhronosGroup/glTF-Sample-Assets); each asset keeps its own license
+* *3D Graphics Rendering Cookbook* by Sergey Kosarevsky and Viktor Latypov
+
+* *Game Engine Architecture* by Jason Gregory
+
+* [vkguide.dev](https://vkguide.dev)
+
+* Test scenes from the [Khronos glTF Sample Assets](https://github.com/KhronosGroup/glTF-Sample-Assets); each asset keeps its own license
 
 ## License
 
