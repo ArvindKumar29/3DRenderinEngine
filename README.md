@@ -5,6 +5,9 @@ A real-time 3D renderer written from scratch in C++20 and Vulkan 1.3/1.4 (`vulka
 <p align="center">
   <img src="Results/First%20Triangle.png" alt="First Triangle Rendered in Vulkan 1.3" width="480" />
 </p>
+Architecture of the engine, upto latest progresee, is shown as follows:
+<img width="8192" height="1189" alt="Architecture Diagram" src="https://github.com/user-attachments/assets/44cdb0b9-90d5-4729-9620-7d6e79f978ab" />
+
 
 ## Status
 
