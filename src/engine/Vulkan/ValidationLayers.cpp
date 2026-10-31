@@ -2,6 +2,9 @@
 
 namespace VKRENDERER
 {
+	ValidationLayers::ValidationLayers(){}
+	ValidationLayers::~ValidationLayers(){}
+
 	void ValidationLayers::getRequiredValidationLayers(std::vector<char const*>& requiredLayers, vk::raii::Context& ctx)
 	{
 		if (enableValidationLayers)

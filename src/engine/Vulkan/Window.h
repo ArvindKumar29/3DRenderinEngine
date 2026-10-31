@@ -12,6 +12,7 @@ namespace VKRENDERER
 {
 	class Window
 	{
+
 		vk::SurfaceFormatKHR chooseSwapSurfaceFormat(std::vector<vk::SurfaceFormatKHR> const &availableFormats);
 		vk::PresentModeKHR choosePresentMode(std::vector<vk::PresentModeKHR> const& availablePresentModes);
 		vk::Extent2D chooseSwapExtent(vk::SurfaceCapabilitiesKHR const &capabilities, GLFWwindow* window);
@@ -19,6 +20,8 @@ namespace VKRENDERER
 
 
 	public:
+		Window();
+		~Window();
 
 		GLFWwindow* initWindow(uint32_t width, uint32_t height, const char* title);
 		void initSurface(vk::raii::Instance& instance, GLFWwindow* window);

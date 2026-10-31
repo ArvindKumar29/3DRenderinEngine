@@ -2,6 +2,12 @@
 
 namespace VKRENDERER
 {
+	Device::Device()
+	{}
+
+	Device::~Device()
+	{}
+
 	bool Device::isDeviceSuitable(vk::raii::PhysicalDevice& const pd, vk::raii::SurfaceKHR& surface, std::vector<char const*> requiredDeviceExtensions)
 	{
 		// Check support of vulkan 1.3 or above
@@ -65,10 +71,7 @@ namespace VKRENDERER
 		}
 
 		physicalDevice = *devIter;
-		//std::vector<vk::ExtensionProperties> extensions = physicalDevice.enumerateDeviceExtensionProperties();
-		//spdlog::info("==========================GPU supporte extensions details===========================");
-		//for (auto &ext : extensions)
-		//	spdlog::info("\tExtension name: {}, Version: {}", ext.extensionName, ext.specVersion);
+		
 	}
 
 	void Device::createLogicalDevice(std::vector<char const*> requiredDeviceExtensions)
@@ -77,19 +80,6 @@ namespace VKRENDERER
 
 		auto graphicsQueueFamilyProperties = std::ranges::find_if(qfp, [](auto const& qfp) { return (qfp.queueFlags & vk::QueueFlagBits::eGraphics) != static_cast<vk::QueueFlags>(0); });
 		auto graphicsIndex = static_cast<uint32_t>(std::distance(qfp.begin(), graphicsQueueFamilyProperties));
-
-		//vk::StructureChain < vk::PhysicalDeviceFeatures2,
-		//	vk::PhysicalDeviceVulkan11Features,
-		//	vk::PhysicalDeviceVulkan13Features,
-		//	vk::PhysicalDeviceVulkan13Features,
-		//	vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT>
-		//	featureChain(
-		//		vk::PhysicalDeviceFeatures2(),
-		//		vk::PhysicalDeviceVulkan11Features().setShaderDrawParameters(true),
-		//		vk::PhysicalDeviceVulkan13Features().setDynamicRendering(true),
-		//		vk::PhysicalDeviceVulkan13Features().setSynchronization2(true),
-		//		vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT().setExtendedDynamicState(true)
-		//	);
 
 		float queuePriority = 0.5f;
 		vk::DeviceQueueCreateInfo deviceQueueCreateInfo = vk::DeviceQueueCreateInfo()
@@ -119,7 +109,6 @@ namespace VKRENDERER
 		logicalDevice = vk::raii::Device(physicalDevice, deviceCreateInfo);
 		graphicsQueue = vk::raii::Queue(logicalDevice, graphicsIndex, 0);
 		
-		//spdlog::info("Logical Devie and Graphics Queue Created Successfully!!!");
 	}
 
 }

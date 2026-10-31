@@ -2,15 +2,19 @@
 
 namespace VKRENDERER
 {
+	Instance::Instance()
+	{}
+
+	Instance::~Instance()
+	{}
+
 	void Instance::init(vk::raii::Context& ctx)
 	{
-		//spdlog::info("Creating Vulkan Instance for the Renderer!!!");
 		createInstance(ctx);
 	}
 
 	void Instance::createInstance(vk::raii::Context& ctx)
 	{
-		//spdlog::info("Creating Application Info struct for the instance!!!");
 		vk::ApplicationInfo appInfo = vk::ApplicationInfo()
 			.setPApplicationName("Vulkan Renderer")
 			.setApplicationVersion(VK_MAKE_VERSION(1, 0, 0))
@@ -33,14 +37,11 @@ namespace VKRENDERER
 		}
 
 		// Get the required Validation Layers
-		//spdlog::info("Getting required validation Layers!!!");
 		validationLayers.getRequiredValidationLayers(requiredLayers, ctx);
 
 		// Get the required Instance Extensions 
-		//spdlog::info("Getting required Instance Extensions!!!");
 		auto requiredExtensions = getRequiredExtensions();
 
-		//auto extensionProperties = ctx.enumerateInstanceExtensionProperties();
 		auto unsupportedPropertyIt =
 			std::ranges::find_if(requiredExtensions,
 				[&extensionProperties](auto const& requiredExtension) {
@@ -52,7 +53,6 @@ namespace VKRENDERER
 			throw std::runtime_error("Required extension not supported: " + std::string(*unsupportedPropertyIt));
 		}
 
-		//spdlog::info("Creating create info struct for instances!!!");
 		vk::InstanceCreateInfo createInfo = vk::InstanceCreateInfo()
 			.setPApplicationInfo(&appInfo)
 			.setEnabledLayerCount(static_cast<uint32_t>(requiredLayers.size()))
@@ -61,7 +61,6 @@ namespace VKRENDERER
 			.setPpEnabledExtensionNames(glfwExtensions);
 
 		instance = vk::raii::Instance(ctx, createInfo);
-		//spdlog::info("Vulkan Instance created Successfully!!!");
 
 	}
 

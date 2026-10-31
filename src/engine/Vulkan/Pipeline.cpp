@@ -1,7 +1,11 @@
 #include "Pipeline.h"
 
+
 namespace VKRENDERER
 {
+	Pipeline::Pipeline() {}
+	Pipeline::~Pipeline() {}
+
 	vk::raii::ShaderModule Pipeline::createShaderModule(vk::raii::Device& ld, const std::vector<char>& code)
 	{
 		vk::ShaderModuleCreateInfo shaderModuleCreateInfo = vk::ShaderModuleCreateInfo()
@@ -31,8 +35,14 @@ namespace VKRENDERER
 			.setPName("main");
 		vk::PipelineShaderStageCreateInfo shaderStage[] = { vertexShaderStageCreateInfo, fragmentShaderStageCreateInfo };
 
-		// Vertex input for shaders
-		vk::PipelineVertexInputStateCreateInfo vertexInputCreateInfo;
+		// Vertex input for shaders(Vertex and Index buffers and other data) with appropriate memory allocation
+		auto bindingDescription = Vertex::getBindingDescription();
+		auto attributeDescription = Vertex::getAttributeDescription();
+		vk::PipelineVertexInputStateCreateInfo vertexInputCreateInfo = vk::PipelineVertexInputStateCreateInfo()
+			.setVertexBindingDescriptions(bindingDescription)
+			.setVertexAttributeDescriptions(attributeDescription);
+
+
 		vk::PipelineInputAssemblyStateCreateInfo inputAssemblyCreateInfo = vk::PipelineInputAssemblyStateCreateInfo()
 			.setTopology(vk::PrimitiveTopology::eTriangleList)
 			.setPrimitiveRestartEnable(vk::False);
@@ -93,7 +103,6 @@ namespace VKRENDERER
 
 		// Creating graphics Pipeline
 		graphicsPipeline = vk::raii::Pipeline(ld, nullptr, graphicsPipelineCreateInfo);
-		spdlog::info("Finally Graphics Pipeline created with all the stages completed...");
 	}
 
 	std::vector<char> Pipeline::readFile(const std::string& fileName)
@@ -104,7 +113,6 @@ namespace VKRENDERER
 			spdlog::error("Shader file not found at {}", fileName);
 			throw std::runtime_error("No shader file found!!!");
 		}
-		spdlog::info("Shader file found at {}", fileName);
 		size_t fileSize = static_cast<size_t>(file.tellg());
 		std::vector<char> buffer(fileSize);
 		file.seekg(0);
@@ -121,6 +129,5 @@ namespace VKRENDERER
 		renderFence = vk::raii::Fence(ld,
 			vk::FenceCreateInfo()
 			.setFlags(vk::FenceCreateFlagBits::eSignaled));
-		spdlog::info("Sync objects, Semaphores and Fences, are created!!!");
 	}
 }

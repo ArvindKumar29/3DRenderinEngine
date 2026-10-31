@@ -8,8 +8,11 @@ namespace VKRENDERER
 {
 	class Instance
 	{
+
 		void createInstance(vk::raii::Context& ctx);
 	public:
+		Instance();
+		~Instance();
 
 		void init(vk::raii::Context& ctx);
 		std::vector<char const*> getRequiredExtensions();

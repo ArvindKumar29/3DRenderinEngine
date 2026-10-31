@@ -3,6 +3,5 @@
 
 int main() {
 	VKRENDERER::Engine engine;
-	engine.run();
 	return 0;
 }

@@ -7,6 +7,8 @@ namespace VKRENDERER
 	class ValidationLayers
 	{
 	public:
+		ValidationLayers();
+		~ValidationLayers();
 		void getRequiredValidationLayers(std::vector<char const*>& requiredLayers,  vk::raii::Context& ctx);
 	private:
 

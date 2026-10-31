@@ -2,6 +2,9 @@
 
 namespace VKRENDERER
 {
+	Window::Window(){}
+	Window::~Window(){}
+
 	GLFWwindow* Window::initWindow(uint32_t width, uint32_t height, const char* title)
 	{
 		glfwInit();
@@ -21,7 +24,6 @@ namespace VKRENDERER
 			throw std::runtime_error("Failed to create window surface!!!");
 		}
 		surface = vk::raii::SurfaceKHR(instance, _surface);
-		//spdlog::info("Window Surface is Created successfully");
 	}
 
 	void Window::createSwapChain(vk::raii::PhysicalDevice& pd, vk::raii::Device& ld)
@@ -115,8 +117,6 @@ namespace VKRENDERER
 			imageViewCreateInfo.image = image;
 			swapChainImageViews.emplace_back(ld, imageViewCreateInfo);
 		}
-
-		spdlog::info("Image view created...");
 	}
 
 	void Window::transitionImageLayout(vk::raii::CommandBuffer& cmdBuffer,

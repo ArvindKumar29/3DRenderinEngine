@@ -2,13 +2,18 @@
 
 namespace VKRENDERER
 {
+	CommandPool::CommandPool()
+	{}
+
+	CommandPool::~CommandPool()
+	{}
+
 	void CommandPool::createCommandPool(vk::raii::Device& ld, uint32_t queueIndex)
 	{
 		vk::CommandPoolCreateInfo poolInfo = vk::CommandPoolCreateInfo()
 			.setFlags(vk::CommandPoolCreateFlagBits::eResetCommandBuffer)
 			.setQueueFamilyIndex(queueIndex);
 		cmdPool = vk::raii::CommandPool(ld, poolInfo);
-		//spdlog::info("Command Pool Created!!!");
 	}
 
 	void CommandPool::creatCommandBuffer(vk::raii::Device& ld)
@@ -18,15 +23,11 @@ namespace VKRENDERER
 			.setLevel(vk::CommandBufferLevel::ePrimary)
 			.setCommandBufferCount(1);
 		cmdBuffer = std::move(vk::raii::CommandBuffers(ld, allocInfo).front());
-		//spdlog::info("Command Buffer Created!!!");
 	}
 
-	void CommandPool::recordCommandBuffer(vk::raii::Device& ld, vk::ImageView imageView, vk::Extent2D extent, vk::raii::Pipeline& pipeline)
+	void CommandPool::recordCommandBuffer(vk::raii::Device& ld, vk::raii::PhysicalDevice& pd, vk::ImageView imageView, vk::Extent2D extent, vk::raii::Pipeline& pipeline, vertexBuffer& vertexBuffer, indexBuffer& indexBuffer)
 	{
-		// Starting command buffer recording
-		//vk::CommandBufferBeginInfo beginInfo{};
-		//cmdBuffer.begin(beginInfo);
-
+		
 		// Clear screen and set clear color
 		vk::ClearValue clearColor;
 		clearColor.color = vk::ClearColorValue(std::array<float, 4>{0.05f, 0.05f, 0.05f, 1.0f});
@@ -53,8 +54,14 @@ namespace VKRENDERER
 		vk::Rect2D scissor(vk::Offset2D(0, 0), extent);
 		cmdBuffer.setScissor(0, scissor);
 		
+		// Binding vertex buffer
+		cmdBuffer.bindVertexBuffers(0, *vertexBuffer.buffer, { 0 });
+		cmdBuffer.bindIndexBuffer(*indexBuffer.buffer, 0, vk::IndexType::eUint32);
+
+
 		// Final draw command
-		cmdBuffer.draw(3, 1, 0, 0);
+		//cmdBuffer.draw(static_cast<uint32_t>(vertexBuffer.VB.size()), 1, 0, 0);
+		cmdBuffer.drawIndexed(static_cast<uint32_t>(indexBuffer.IB.size()), 1, 0, 0, 0);
 
 		cmdBuffer.endRendering();
 		//cmdBuffer.end();
